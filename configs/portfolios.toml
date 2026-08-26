@@ -1,0 +1,29 @@
+[assets.fixed_income]
+label = "Fixed Income"
+risky = false
+# Use the point-in-time adjusted total-return history for the fixed-income fund.
+# The fund accrues on a calendar-day basis, but the portfolio recognizes that
+# accrual only when a new vendor NAV becomes available.
+
+[assets.gold]
+label = "Gold"
+risky = true
+
+[assets.equity]
+label = "Equity"
+risky = true
+
+[assets.usd]
+label = "US Dollar"
+risky = true
+investable = false
+
+[portfolios.medium_term]
+label = "Medium-Term"
+horizon_months = 6
+weights = { fixed_income = 0.30, gold = 0.40, equity = 0.30 }
+
+[portfolios.long_term]
+label = "Long-Term"
+horizon_months = 12
+weights = { fixed_income = 0.10, gold = 0.50, equity = 0.40 }

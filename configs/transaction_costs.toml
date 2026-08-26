@@ -1,0 +1,13 @@
+# Explicit exchange/fund transaction fees. Values are percentages of traded notional,
+# not decimal fractions. Slippage is modeled separately by the execution engine.
+[assets.fixed_income]
+buy_percent = 0.01875
+sell_percent = 0.01875
+
+[assets.equity]
+buy_percent = 0.116
+sell_percent = 0.11875
+
+[assets.gold]
+buy_percent = 0.125
+sell_percent = 0.125

@@ -1,0 +1,24 @@
+# Stage 4 mandate and secondary research preferences. USD/IRR is the required benchmark
+# at the CLI layer. A policy must first satisfy its horizon-specific dollar-relative
+# return mandate; the weights rank only the feasible Pareto/stability candidates.
+[common]
+tail_probability = 0.10
+minimum_neighbors = 2
+minimum_feasible_neighbor_fraction = 0.6666666667
+maximum_neighbor_utility_gap = 0.20
+
+[portfolios.medium_term]
+return_weight = 0.30
+drawdown_weight = 0.25
+breach_weight = 0.35
+cost_weight = 0.10
+minimum_real_return = 0.0
+strict_minimum_real_return = false
+
+[portfolios.long_term]
+return_weight = 0.45
+drawdown_weight = 0.30
+breach_weight = 0.15
+cost_weight = 0.10
+minimum_real_return = 0.0
+strict_minimum_real_return = true

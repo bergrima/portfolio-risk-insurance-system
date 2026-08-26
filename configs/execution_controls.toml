@@ -1,0 +1,13 @@
+# Stage 5 operational controls. A human approver accepts these values at paper
+# portfolio initialization; they are execution boundaries, not return guarantees.
+[common]
+max_data_age_hours = 36
+floor_alert_buffer_fraction = 0.05
+reconciliation_tolerance = 0.01
+approval_expiry_hours = 24
+
+[portfolios.medium_term]
+max_daily_turnover = 0.20
+
+[portfolios.long_term]
+max_daily_turnover = 0.15

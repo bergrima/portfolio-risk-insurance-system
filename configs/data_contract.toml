@@ -1,0 +1,51 @@
+[policy]
+timezone = "Asia/Tehran"
+calendar = "weekday valuation calendar; instrument holidays carry the prior published NAV"
+weekmask = "Sat Sun Mon Tue Wed"
+valuation_time = "16:00"
+missing_data = "previous"
+minimum_coverage = 0.98
+
+# Stable internal identifiers isolate the engine from vendor ticker changes. Replace the
+# source adapter, not these identifiers, when a data vendor changes.
+[series.fixed_income_tr]
+asset = "fixed_income"
+instrument = "لبخند fixed-income fund adjusted close"
+kind = "total_return"
+currency = "IRR"
+source = "TSETMC via pytse-client"
+max_stale_days = 4
+
+[series.gold_tr]
+asset = "gold"
+instrument = "طلا gold fund adjusted close"
+kind = "total_return"
+currency = "IRR"
+source = "TSETMC via pytse-client"
+max_stale_days = 4
+
+[series.equity_tr]
+asset = "equity"
+instrument = "آگاس equity fund adjusted close"
+kind = "total_return"
+currency = "IRR"
+source = "TSETMC via pytse-client"
+max_stale_days = 4
+
+[series.usd_irr]
+asset = "usd"
+instrument = "Wallex USDTTMN (USDT/IRT), converted from toman to IRR"
+kind = "exchange_rate"
+currency = "IRR"
+source = "Wallex public candle API"
+max_stale_days = 2
+investable = false
+
+[series.cpi]
+instrument = "Official consumer price index"
+kind = "inflation_index"
+currency = "IRR"
+source = "official statistics publication"
+max_stale_days = 40
+publication_lag_days = 15
+investable = false
